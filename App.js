@@ -71,9 +71,6 @@ class CartScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-
-
-
         <Text>Cart</Text>
       </View>
     );
