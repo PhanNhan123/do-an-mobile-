@@ -1,13 +1,16 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-// class component - function component
+import {
+  View,
+  Text,
+  StatusBar,
+  ScrollView
+} from 'react-native';
+import HomeScreen from './src/screens/home';
 
-function App() {
+const App = () => {
   return (
-    <View>
-      <Text>Run</Text>
-    </View>
+    <HomeScreen />
   );
-}
+};
 
 export default App;
