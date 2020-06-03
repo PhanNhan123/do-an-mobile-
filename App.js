@@ -5,9 +5,9 @@
 //   StatusBar,
 //   ScrollView
 // } from 'react-native';
- import HomeScreen from './src/screens/home';
- import KhuyenMaiScreen from './src/screens/khuyenmai';
- import Product from './src/screens/product'; 
+import HomeScreen from './src/screens/home';
+import KhuyenMaiScreen from './src/screens/khuyenmai';
+import Product from './src/screens/product';
 // import DrawerNavigation from './src/DrawerNavigation';
 
 // const App = () => {
@@ -17,23 +17,22 @@
 // };
 
 // export default App;
-import React ,{Component} from "react"; 
-import{
+import React, { Component } from "react";
+import {
   View,
   Text,
   StyleSheet,
   SafeAreaView
-}from "react-native"
-import { createMaterialBottomTabNavigator} from "react-navigation-material-bottom-tabs"
+} from "react-native"
+import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs"
 import Icon from 'react-native-vector-icons/Ionicons'
-export default class App extends Component
-{
-  render(){
-    return(
+export default class App extends Component {
+  render() {
+    return (
       <SafeAreaView style={{
-        flex:1,backgroundColor:'#f2f2f2'
+        flex: 1, backgroundColor: '#f2f2f2'
       }}>
-        <AppTabNavigator/>
+        <AppTabNavigator />
       </SafeAreaView>
     )
   }
@@ -68,12 +67,14 @@ export default class App extends Component
 //     );
 //   }
 // }
-class  CartScreen extends Component{
-  render()
-  {
-    return(
+class CartScreen extends Component {
+  render() {
+    return (
       <View style={styles.container}>
-      <Text>Cart</Text>
+
+
+
+        <Text>Cart</Text>
       </View>
     );
   }
@@ -81,63 +82,67 @@ class  CartScreen extends Component{
 
 const AppTabNavigator = createMaterialBottomTabNavigator(
   {
-    Home:{ screen: HomeScreen,
-    navigationOptions:{
-      tabBarLabel:'Home',
-      tabBarIcon:({tintColor})=>(
-        <Icon name="ios-home" color ={tintColor} size ={24}/>
-      )
-      }
-   },
-    KhuyenMai: {screen: KhuyenMaiScreen,
-      navigationOptions:{
-        tabBarLabel:'Khuyến mãi',
-        tabBarIcon:({tintColor})=>(
-          <Icon name="ios-star" color ={tintColor} size ={24}/>
+    Home: {
+      screen: HomeScreen,
+      navigationOptions: {
+        tabBarLabel: 'Home',
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="ios-home" color={tintColor} size={24} />
         )
       }
     },
-    Product: {screen: Product,
-      navigationOptions:{
-        tabBarLabel:'Products',
-        tabBarIcon:({tintColor})=>(
-          <Icon name="ios-list" color ={tintColor} size ={24}/>
+    KhuyenMai: {
+      screen: KhuyenMaiScreen,
+      navigationOptions: {
+        tabBarLabel: 'Khuyến mãi',
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="ios-star" color={tintColor} size={24} />
         )
       }
     },
-    Cart: {screen: CartScreen,
-      navigationOptions:{
-        tabBarLabel:'Cart',
-        tabBarIcon:({tintColor})=>(
-          <Icon name="ios-cart" color ={tintColor} size ={24}/>
+    Product: {
+      screen: Product,
+      navigationOptions: {
+        tabBarLabel: 'Products',
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="ios-list" color={tintColor} size={24} />
+        )
+      }
+    },
+    Cart: {
+      screen: CartScreen,
+      navigationOptions: {
+        tabBarLabel: 'Cart',
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="ios-cart" color={tintColor} size={24} />
         )
       }
     }
-  },{
-    initialRouteName: 'Home',
-    // order:['Settings','Home'],
-    tabBarPosition:'bottom',
-    swipeEnabled: true,
-    animationEnabled: false,
-    tabBarOptions:{
-    activeTintColor:'orange',
-    inactiveTintColor:'grey',
-    style:{
+  }, {
+  initialRouteName: 'Home',
+  // order:['Settings','Home'],
+  tabBarPosition: 'bottom',
+  swipeEnabled: true,
+  animationEnabled: false,
+  tabBarOptions: {
+    activeTintColor: 'orange',
+    inactiveTintColor: 'grey',
+    style: {
       backgroundColor: '#f2f2f2'
     },
-    indicatorStyle:{
-      height:0
+    indicatorStyle: {
+      height: 0
     },
     showIcon: true
-    }
   }
+}
 )
-const styles  = StyleSheet.create(
+const styles = StyleSheet.create(
   {
     container: {
-      flex: 1, 
-      alignItems:'center',
-      justifyContent:'center'
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center'
     }
   }
 )
