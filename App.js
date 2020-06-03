@@ -73,6 +73,8 @@ class CartScreen extends Component {
       <View style={styles.container}>
         <Text>Cart</Text>
       </View>
+
+
     );
   }
 }
