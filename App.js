@@ -8,6 +8,8 @@
 import HomeScreen from './src/screens/home';
 import KhuyenMaiScreen from './src/screens/khuyenmai';
 import Product from './src/screens/product';
+import ScreensListTaiNghe from './src/screens/listtainghe';
+import ScreensList from './src/screens/list';
 // import DrawerNavigation from './src/DrawerNavigation';
 
 // const App = () => {
@@ -99,15 +101,35 @@ const AppTabNavigator = createMaterialBottomTabNavigator(
         )
       }
     },
-    Product: {
-      screen: Product,
+    // Product: {
+    //   screen: Product,
+    //   navigationOptions: {
+    //     tabBarLabel: 'Product',
+    //     tabBarIcon: ({ tintColor }) => (
+    //       <Icon name="ios-list" color={tintColor} size={24} />
+    //     )
+    //   }
+    // },
+    
+    
+    ListTaiNghe: {
+      screen: ScreensListTaiNghe,
       navigationOptions: {
-        tabBarLabel: 'Products',
+        tabBarLabel: 'Danh sách',
         tabBarIcon: ({ tintColor }) => (
           <Icon name="ios-list" color={tintColor} size={24} />
         )
       }
     },
+    // DanhSach: {
+    //   screen: ScreensList,
+    //   navigationOptions: {
+    //     tabBarLabel: 'Danh sách ',
+    //     tabBarIcon: ({ tintColor }) => (
+    //       <Icon name="ios-list" color={tintColor} size={24} />
+    //     )
+    //   }
+    // },
     Cart: {
       screen: CartScreen,
       navigationOptions: {

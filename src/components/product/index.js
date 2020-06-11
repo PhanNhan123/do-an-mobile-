@@ -9,12 +9,10 @@ import {
   FlatList,
   Button,
 } from 'react-native';
-
 import { styles } from './styles';
 import { Table, TableWrapper, Row, Rows, Col } from 'react-native-table-component';
 
 class ProductDetail extends Component {
-
   constructor(props) {
     super(props);
     this.state ={
