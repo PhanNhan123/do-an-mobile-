@@ -133,7 +133,7 @@ const AppTabNavigator = createMaterialBottomTabNavigator(
     Cart: {
       screen: CartScreen,
       navigationOptions: {
-        tabBarLabel: 'Cart',
+        tabBarLabel: 'Giỏ Hàng',
         tabBarIcon: ({ tintColor }) => (
           <Icon name="ios-cart" color={tintColor} size={24} />
         )
