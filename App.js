@@ -8,9 +8,7 @@
 import HomeScreen from './src/screens/home';
 import KhuyenMaiScreen from './src/screens/khuyenmai';
 import Product from './src/screens/product';
-import ScreensListTaiNghe from './src/screens/listtainghe';
 import ScreensList from './src/screens/list';
-// import DrawerNavigation from './src/DrawerNavigation';
 
 // const App = () => {
 //   return (
@@ -112,8 +110,8 @@ const AppTabNavigator = createMaterialBottomTabNavigator(
     // },
     
     
-    ListTaiNghe: {
-      screen: ScreensListTaiNghe,
+    List: {
+      screen: ScreensList,
       navigationOptions: {
         tabBarLabel: 'Danh sách',
         tabBarIcon: ({ tintColor }) => (
@@ -121,15 +119,7 @@ const AppTabNavigator = createMaterialBottomTabNavigator(
         )
       }
     },
-    // DanhSach: {
-    //   screen: ScreensList,
-    //   navigationOptions: {
-    //     tabBarLabel: 'Danh sách ',
-    //     tabBarIcon: ({ tintColor }) => (
-    //       <Icon name="ios-list" color={tintColor} size={24} />
-    //     )
-    //   }
-    // },
+
     Cart: {
       screen: CartScreen,
       navigationOptions: {

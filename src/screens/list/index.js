@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import { ScrollView } from 'react-native'
-import List from '../../list';
+import ListTaiNghe  from '../../list';
 
-
-class SreensList extends Component{
+class ScreensList extends Component{
     render()
     {
     return (
         < ScrollView>
-            <List/>
+            <ListTaiNghe/>
         </ScrollView>
-        
     )}
 }
-export default SreensList;
+export default ScreensList;
