@@ -42,7 +42,7 @@ class ProductDetail extends Component {
       <View style={styles.container}>
         <ScrollView>
           <View style={{alignItems:'center', marginHorizontal:30}}>
-            <Image style={styles.productImg} source={require('../../assets/images/tai-nghe-iphone-5.jpg')}/>
+            <Image style={styles.productImg} source={require('../assets/images/tai-nghe-iphone-5.jpg')}/>
             <Text style={styles.name}>Tai nghe iPhone</Text>
             <Text style={styles.price}> 40.000 đồng</Text>
             <Text style={styles.description}>
