@@ -9,6 +9,7 @@ import HomeScreen from './src/screens/home';
 import KhuyenMaiScreen from './src/screens/khuyenmai';
 import Product from './src/screens/product';
 import ScreensList from './src/screens/list';
+import CartScreen from './src/cart';
 
 // const App = () => {
 //   return (
@@ -67,18 +68,6 @@ export default class App extends Component {
 //     );
 //   }
 // }
-class CartScreen extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Cart</Text>
-      </View>
-
-
-    );
-  }
-}
-
 const AppTabNavigator = createMaterialBottomTabNavigator(
   {
     Home: {
