@@ -5,7 +5,9 @@ import { StyleSheet, Button, Text, View, TouchableOpacity, ScrollView, Image, Ac
  class CartScreen extends Component {
 	render(){
 		return(
-			<View>Đây là giỏ hàng</View>
+			<ScrollView>
+				<Text>Đây là giỏ hàng</Text>
+			</ScrollView>
 		)
 	}
 }
