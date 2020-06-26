@@ -30,7 +30,7 @@ class List extends Component{
   }
 
   render() {
-    var data = [["Tai nghe","Cáp sạc","Bao da, ốp"],["Dưới 200.000đ","từ 200.000đ - 500.000đ","trên 500.000đ"]];
+    var data = [["Tai nghe","Loa"],["Dưới 200.000đ","từ 200.000đ - 500.000đ","trên 500.000đ"]];
     return (
       <View style={{flex: 1}}>
         <View style={{height: 60}} />

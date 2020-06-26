@@ -50,14 +50,7 @@ class ProductDetail extends Component {
             Tai nghe được thiết kế khá ấn tượng, chất lượng âm thanh tốt, Jack cắm chuẩn 3.5 mm bạn có thể sử dụng loại tai nghe này cho các dòng máy HTC, Sony, Samsung, LG, Nokia... 
             Nghe hay hơn rất nhiều so với tai nghe zin của những hãng này.
             </Text>
-          </View>
-          <View style={styles.starContainer}>
-            <Image style={styles.star} source={{uri:"https://img.icons8.com/color/40/000000/star.png"}}/>
-            <Image style={styles.star} source={{uri:"https://img.icons8.com/color/40/000000/star.png"}}/>
-            <Image style={styles.star} source={{uri:"https://img.icons8.com/color/40/000000/star.png"}}/>
-            <Image style={styles.star} source={{uri:"https://img.icons8.com/color/40/000000/star.png"}}/>
-            <Image style={styles.star} source={{uri:"https://img.icons8.com/color/40/000000/star.png"}}/>
-          </View>        
+          </View>      
           <View style={styles.separator}></View>
           <View style={styles.addToCarContainer}>
             <TouchableOpacity style={styles.shareButton} onPress={()=> this.clickEventListener()}>
