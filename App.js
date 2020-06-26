@@ -47,18 +47,6 @@ export default class App extends Component {
     )
   }
 }
-class CartScreen extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Cart</Text>
-      </View>
-
-
-    );
-  }
-}
-
 const AppTabNavigator = createMaterialBottomTabNavigator(
   {
     Home: {

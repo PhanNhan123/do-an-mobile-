@@ -23,9 +23,11 @@ const Listkhuyenmai = () =>
             </Text>
           </View>
       </View>
-      <View>
-
-      </View>
+      <View style={{width:'100%',height:screenHeight/3,paddingTop:40}}>
+        <Image style={{width:'100%',height:'100%',position:'relative' } }source={require('../../assets/images/Loa-bose-Soundlink-mini.jpg')}>
+            </Image>
+            <Text style={{position:'absolute',color:'red',fontSize:22,left:120,bottom:0,fontFamily:'Open Sans'}}>SALE UP TO 50%</Text>
+        </View>
     
     </View>
     </>
