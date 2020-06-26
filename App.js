@@ -1,10 +1,4 @@
-// import React from 'react';
-// import {
-//   View,
-//   Text,
-//   StatusBar,
-//   ScrollView
-// } from 'react-native';
+
 import HomeScreen from './src/screens/home';
 import KhuyenMaiScreen from './src/screens/khuyenmai';
 import Product from './src/screens/product';
@@ -23,51 +17,48 @@ import {
   View,
   Text,
   StyleSheet,
-  SafeAreaView
+  Image,
+  SafeAreaView,
+  TouchableOpacity
 } from "react-native"
 import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs"
 import Icon from 'react-native-vector-icons/Ionicons'
+import Icon1 from 'react-native-vector-icons/MaterialIcons'
+import { Row } from 'react-native-table-component';
 export default class App extends Component {
   render() {
     return (
       <SafeAreaView style={{
         flex: 1, backgroundColor: '#f2f2f2'
       }}>
+        <View style = {styles.navBar}>
+          <Image source={ require('./src/assets/images/JBL-Logo.png')}  style={{ width:90,height:35} } ></Image>
+          <View style={styles.rightNav} >
+            <TouchableOpacity>
+              <Icon1 style={styles.navItem} name="search" size={25} ></Icon1>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Icon1 style={styles.navItem} name="account-circle" size={25} ></Icon1>
+            </TouchableOpacity>
+          </View>
+        </View>
         <AppTabNavigator />
       </SafeAreaView>
     )
   }
 }
-// class  HomeScreen extends Component{
-//   render()
-//   {
-//     return(
-//       <View style={styles.container}>
-//       <Text>Tab navigation </Text>
-//       </View>
-//     );
-//   }
-// }
-// class  KhuyenMaiScreen extends Component{
-//   render()
-//   {
-//     return(
-//       <View style={styles.container}>
-//       <Text>Khuyến mãi</Text>
-//       </View>
-//     );
-//   }
-// }
-// class  ListScreen extends Component{
-//   render()
-//   {
-//     return(
-//       <View style={styles.container}>
-//       <Text>List</Text>
-//       </View>
-//     );
-//   }
-// }
+class CartScreen extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text>Cart</Text>
+      </View>
+
+
+    );
+  }
+}
+
 const AppTabNavigator = createMaterialBottomTabNavigator(
   {
     Home: {
@@ -88,16 +79,7 @@ const AppTabNavigator = createMaterialBottomTabNavigator(
         )
       }
     },
-    // Product: {
-    //   screen: Product,
-    //   navigationOptions: {
-    //     tabBarLabel: 'Product',
-    //     tabBarIcon: ({ tintColor }) => (
-    //       <Icon name="ios-list" color={tintColor} size={24} />
-    //     )
-    //   }
-    // },
-    
+
     
     List: {
       screen: ScreensList,
@@ -143,6 +125,21 @@ const styles = StyleSheet.create(
       flex: 1,
       alignItems: 'center',
       justifyContent: 'center'
-    }
+    },
+    navBar:{
+      height: 55,
+      backgroundColor:'white',
+      elevation : 3,
+      paddingHorizontal: 15, 
+      flexDirection: 'row',
+      alignItems:'center',
+      justifyContent:'space-between'
+    } ,
+    rightNav: {
+      flexDirection: 'row'
+    },
+    navItem:{
+      marginLeft:25
+    } 
   }
 )

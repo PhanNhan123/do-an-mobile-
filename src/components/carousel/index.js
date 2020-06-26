@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+   StyleSheet,
    View,
    Text,
    Dimensions,
@@ -8,15 +9,20 @@ import {
 
 import Carousel from 'react-native-snap-carousel';
 
+const styles = StyleSheet.create({
+   imgheight: {
+      height:'30px',
+   }, 
+} );
 const AppCarousel = (props) => {
    console.disableYellowBox = true;
    const screenWidth = Dimensions.get('window').width;
-
+   const screenHeight = Dimensions.get('window').height;
    const _renderItem = ({ item }) => {
       return (
          <View>
             <Text>{item.title}</Text>
-            <Image style={{ width: screenWidth / 2 }} source={require('../../assets/images/banner-noel1-1.jpg')} />
+            <Image style={{ width: screenWidth / 2,height:screenHeight/4}} source={require('../../assets/images/Loa-sony-srs-xb12-extra-bass.jpg')} />
          </View>
       );
    };

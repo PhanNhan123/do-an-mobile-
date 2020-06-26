@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
    title: {
       fontSize: 18,
       color: '#4a90e2',
+    
    },
 });
 

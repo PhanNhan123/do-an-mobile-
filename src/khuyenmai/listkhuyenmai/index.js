@@ -1,8 +1,10 @@
 import  React from 'react';
+import {styles}  from '../styles'
 import {
   Image, 
   Text,
-  View,Dimensions
+  View,
+  Dimensions
 } from 'react-native'; 
 const Listkhuyenmai = () => 
 {
@@ -11,14 +13,20 @@ const Listkhuyenmai = () =>
   return(
     <>
     <View>
-      <View style-={{flex:1}} >
-        <Image style={{ width: screenWidth / 2 }}source={require('../../assets/images/banner-TET_DMX_banner_260x92.jpg')}></Image>
-        <Text> khuyến mãi nhân dịp 20-11</Text>
+      <View style={{width:'100%',height:screenHeight/3}} >
+          <Image style={{width:'100%',height:'100%',position:'relative' } }source={require('../../assets/images/tai-nghe-jbl-t500btblk.jpg')}>
+          </Image>
+          <Text style={{position:'absolute',color:'red',fontSize:30,right:10,top:100,fontFamily:'Open Sans'}}>SALE!</Text>
+          <View style={{width:'100%',height:screenHeight/20}}>
+            <Text style={styles.title}>
+              Khuyến mãi hơn cả khuyến mãi 
+            </Text>
+          </View>
       </View>
-      <View >
-        <Image style={{ width: screenWidth / 2 }}source={require('../../assets/images/banner-TET_DMX_banner_260x92.jpg')}></Image>
-        <Text> khuyến mãi nhân dịp năm mới</Text>
+      <View>
+
       </View>
+    
     </View>
     </>
   );

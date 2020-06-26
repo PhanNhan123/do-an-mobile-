@@ -1,7 +1,8 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView ,View } from 'react-native';
 
 import News from '../../components/news';
+import News1 from '../../components/news1';
 import AppCarousel from '../../components/carousel';
 
 const HomeScreen = () => {
@@ -9,9 +10,23 @@ const HomeScreen = () => {
    return (
       <ScrollView>
          <News />
+         <View style={{ marginBottom : 15 }}>
          <AppCarousel
             data={data}
          />
+         </View>
+         <View style={{ marginBottom : 15 }}>
+            <News1 />
+         </View>
+         <View style={{ marginBottom : 15 }}>
+            <News1 />
+         </View>
+         <View style={{ marginBottom : 15 }}>
+            <News1 />
+         </View>
+         <View style={{ marginBottom : 15 }}>
+            <News1 />
+         </View>
       </ScrollView>
    );
 }
