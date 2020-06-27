@@ -4,6 +4,7 @@ import KhuyenMaiScreen from './src/screens/khuyenmai';
 import Product from './src/screens/product';
 import ScreensList from './src/screens/list';
 import CartScreen from './src/cart';
+import ChiTietSanPham from './src/screens/chitietsanpham';
 
 // const App = () => {
 //   return (
@@ -25,6 +26,7 @@ import { createMaterialBottomTabNavigator } from "react-navigation-material-bott
 import Icon from 'react-native-vector-icons/Ionicons'
 import Icon1 from 'react-native-vector-icons/MaterialIcons'
 import { Row } from 'react-native-table-component';
+import {createStackNavigator} from 'react-navigation-stack'
 export default class App extends Component {
   render() {
     return (
@@ -42,8 +44,11 @@ export default class App extends Component {
             </TouchableOpacity>
           </View>
         </View>
+
         <AppTabNavigator />
+      
       </SafeAreaView>
+         
     )
   }
 }
@@ -87,7 +92,14 @@ const AppTabNavigator = createMaterialBottomTabNavigator(
           <Icon name="ios-cart" color={tintColor} size={24} />
         )
       }
-    }
+    },
+    ChiTietSanPham:{
+      screen: ChiTietSanPham,
+      navigationOptions:{
+       
+        tabBarButtonComponent: ()=><View/>
+      }
+    },
   }, {
   initialRouteName: 'Home',
   // order:['Settings','Home'],
@@ -105,7 +117,8 @@ const AppTabNavigator = createMaterialBottomTabNavigator(
     },
     showIcon: true
   }
-}
+},
+
 )
 const styles = StyleSheet.create(
   {
@@ -130,4 +143,4 @@ const styles = StyleSheet.create(
       marginLeft:25
     } 
   }
-)
+) 

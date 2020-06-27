@@ -1002,14 +1002,6 @@
   dependencies:
     nanoid "^3.1.9"
 
-"@react-navigation/stack@^5.4.1":
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/@react-navigation/stack/-/stack-5.6.0.tgz#c307559ab6ba380f977f7f74efbe861bcbbdcf4b"
-  integrity sha512-e5uU37qgi9cXqOac8P2oFAj+4ZY7dI2kt04jg5+psAYN0Coawk6oyowBpBy6FsMBHMQv/p8J97Hc6eUnTwgzQw==
-  dependencies:
-    color "^3.1.2"
-    react-native-iphone-x-helper "^1.2.1"
-
 "@types/babel__core@^7.1.0":
   version "7.1.7"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.7.tgz#1dacad8840364a57c98d0dd4855c6dd3752c6b89"

@@ -5,8 +5,9 @@ import News from '../../components/news';
 import News1 from '../../components/news1';
 import AppCarousel from '../../components/carousel';
 
-const HomeScreen = () => {
+const HomeScreen = ( {navigation}) => {
    let data = [1, 2, 3, 4, 5, 6, 7];
+   console.log(navigation)
    return (
       <ScrollView>
          <News />
@@ -16,17 +17,9 @@ const HomeScreen = () => {
          />
          </View>
          <View style={{ marginBottom : 15 }}>
-            <News1 />
+            <News1 navigation={navigation}/>
          </View>
-         <View style={{ marginBottom : 15 }}>
-            <News1 />
-         </View>
-         <View style={{ marginBottom : 15 }}>
-            <News1 />
-         </View>
-         <View style={{ marginBottom : 15 }}>
-            <News1 />
-         </View>
+       
       </ScrollView>
    );
 }

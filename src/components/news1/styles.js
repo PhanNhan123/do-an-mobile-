@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
         height: 100, 
         // borderWidth: 1 ,
         // backgroundColor: "white",
+        
      },
      img:{
         flex: 1 ,
