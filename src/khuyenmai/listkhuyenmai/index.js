@@ -1,75 +1,126 @@
-import  React from 'react';
-import {styles}  from '../styles'
+import React, { Component } from 'react';
 import {
-  Image, 
+  Image,
   Text,
   View,
   Dimensions,
   ScrollView,
-  TouchableOpacity
-} from 'react-native'; 
-const Listkhuyenmai = () => 
-{
-  const screenHeight = Dimensions.get('window').height;
-   const screenWidth = Dimensions.get('window').width;
-  return(
-    <ScrollView>
-    <View>
-      <View style={{flex:1, flexDirection: 'row',marginTop:20}}>
-        <View style={{width:'45%',height:screenHeight/3,left:10,borderRadius: 10,
-    shadowColor:'black',shadowOpacity:10,elevation: 3}}>
-          <View style={{width:'97%',height:'70%',left:2}} >
-            <Image style={{width:'100%',height:'100%',borderRadius: 10,position:'relative' } }source={require('../../assets/images/tai-nghe-jbl-t500btblk.jpg')}></Image>
-            <Text style={{position:'absolute',color:'red',fontSize:30,right:10,top:100,fontFamily:'Open Sans'}}>SALE!</Text>    
-          </View>
-          <View style={{width:'95%',left:20}}>
-            <TouchableOpacity style={{marginTop:10,height:45}}>
-              <Text style={{color: "black",fontSize:20,}}>Tai nghe jbl </Text>  
-            </TouchableOpacity>
-          </View>
+  StyleSheet,
+  TouchableOpacity,
+  Systrace
+} from 'react-native';
+import { withNavigation } from 'react-navigation';
+import ProductDetail from '../../product';
+
+const screenWidth = Dimensions.get('window').width;
+const screenHeight = Dimensions.get('window').height;
+const productWidth = (screenWidth - 50) / 2;
+const productImageHeight = (productWidth / 380) * 450;
+class Listkhuyenmai extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>Sản phẩm khuyến mãi</Text>
         </View>
-        <View style={{width:'45%',height:screenHeight/3,left:20,borderRadius: 10,
-    shadowColor:'black',shadowOpacity:10,elevation: 3}}>
-          <View style={{width:'97%',height:'70%',left:2}}>
-            <Image style={{width:'100%',height:'100%',borderRadius: 10,position:'relative' } }source={require('../../assets/images/Loa-bose-Soundlink-mini.jpg')}></Image>
-            <Text style={{position:'absolute',color:'white',transform:[{rotate:"-20deg"}],fontSize:22,bottom:90,fontFamily:'Open Sans'}}>SALE UP TO 50%</Text>
-          </View>
-          <View style={{width:'95%',left:20}}>
-            <TouchableOpacity style={{marginTop:10,height:45}}>
-              <Text style={{color: "black",fontSize:20,}}>Loa bose Soundlink mini </Text>  
-            </TouchableOpacity>
-          </View>
+        <View style={styles.body}>
+          <TouchableOpacity>
+            <View style={styles.productContainer} >
+              <Image style={styles.productImage} source={require("../../assets/images/tai-nghe.jpg")} />
+              <Text style={styles.productName} >Thị Hân </Text>
+              <Text style={styles.productPrice}>Giá</Text>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity>
+            <View style={styles.productContainer} >
+              <Image style={styles.productImage} source={require("../../assets/images/tai-nghe.jpg")} />
+              <Text style={styles.productName} >Thị Hân</Text>
+              <Text style={styles.productPrice}>Giá</Text>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity>
+            <View style={styles.productContainer} >
+              <Image style={styles.productImage} source={require("../../assets/images/tai-nghe.jpg")} />
+              <Text style={styles.productName} >Thị Hân</Text>
+              <Text style={styles.productPrice}>Giá</Text>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity>
+            <View style={styles.productContainer} >
+              <Image style={styles.productImage} source={require("../../assets/images/tai-nghe.jpg")} />
+              <Text style={styles.productName} >Thị Hân</Text>
+              <Text style={styles.productPrice}>Giá</Text>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity>
+            <View style={styles.productContainer} >
+              <Image style={styles.productImage} source={require("../../assets/images/tai-nghe.jpg")} />
+              <Text style={styles.productName} >Thị Hân rất vui nè hi hi</Text>
+              <Text style={styles.productPrice}>Giá</Text>
+            </View>
+          </TouchableOpacity>
+
+
         </View>
       </View>
-      <View style={{flex:1,flexDirection: 'row',marginTop:20}}>
-        <View style={{width:'45%',height:screenHeight/3,left:10,borderRadius: 10,
-    shadowColor:'black',shadowOpacity:10,elevation: 3}}>
-          <View style={{width:'97%',height:'70%',left:2}}>
-            <Image style={{width:'100%',height:'100%',borderRadius: 10,position:'relative' } }source={require('../../assets/images/airpods.jpg')}></Image>
-            <Text style={{position:'absolute',color:'red',top:50,fontSize:34}}>Big sale</Text>
-          </View>
-          <View style={{width:'95%',left:20}}>
-            <TouchableOpacity style={{marginTop:10,height:45}}>
-              <Text style={{color: "black",fontSize:20,}}>Tai nghe airpods </Text>  
-            </TouchableOpacity>
-          </View>
-        </View>
-        <View style={{width:'45%',height:screenHeight/3,left:20,borderRadius: 10,
-    shadowColor:'black',shadowOpacity:10,elevation: 3}}>
-          <View style={{width:'97%',height:'70%',left:2}}>
-            <Image style={{width:'100%',height:'100%',borderRadius: 10,position:'relative' } }source={require('../../assets/images/tai-nghe-iphone-5.jpg')}></Image>
-            <Text style={{position:'absolute',color:'red',top:50,fontSize:24}}>Sale 20%</Text>
-          </View>
-          <View style={{width:'95%',left:20}}>
-            <TouchableOpacity style={{marginTop:10,height:45}}>
-              <Text style={{color: "black",fontSize:20,}}>Tai nghe jbl </Text>  
-            </TouchableOpacity>
-          </View>
-        </View>
-      </View>
-    </View>
-    </ScrollView>
-  );
+    );
+  }
 };
 
 export default Listkhuyenmai;
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#fff',
+    margin: 10,
+    shadowColor: '#2E272B',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.3,
+  },
+  titleContainer: {
+    height: 50,
+    justifyContent: 'center',
+    paddingLeft: 10,
+  },
+  tagContainer: {
+    flexWrap: 'wrap',
+  },
+  title: {
+    color: '#D3D3CF',
+    fontSize: 20,
+  },
+  body: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    flexWrap: "wrap"
+  },
+  productContainer:
+  {
+    marginTop: 20,
+    width: productWidth,
+    borderRadius: 20,
+    elevation: 5,
+  },
+  productImage: {
+    marginTop: 1,
+    marginLeft: 4,
+    width: productWidth - 8,
+    height: productImageHeight - 10,
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
+  },
+  productName: {
+    marginLeft: 10,
+    fontSize: 18,
+    flexDirection: 'column',
+  },
+  productPrice: {
+    marginLeft: 10,
+    fontSize: 18,
+    marginBottom: 5
+  }
+});
